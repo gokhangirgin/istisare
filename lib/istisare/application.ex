@@ -12,6 +12,8 @@ defmodule Istisare.Application do
       supervisor(IstisareWeb.Endpoint, []),
       # Start your own worker by calling: Istisare.Worker.start_link(arg1, arg2, arg3)
       # worker(Istisare.Worker, [arg1, arg2, arg3]),
+      #max 26 hours
+      worker(ConCache, [[ttl_check: :timer.hours(2), ttl: :timer.hours(24)], [name: :content]])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
