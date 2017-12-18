@@ -19,7 +19,7 @@ defmodule Istisare.Mixfile do
   def application do
     [
       mod: {Istisare.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :comeonin]
     ]
   end
 
@@ -39,7 +39,9 @@ defmodule Istisare.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:con_cache, "~> 0.12.1"},
-      {:slugger, "~> 0.2"}
+      {:slugger, "~> 0.2"},
+      {:comeonin, "~> 4.0"},
+      {:bcrypt_elixir, "~> 1.0"}
     ]
   end
 end
