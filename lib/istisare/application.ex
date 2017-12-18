@@ -10,6 +10,7 @@ defmodule Istisare.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(IstisareWeb.Endpoint, []),
+      supervisor(IstisareWeb.Presence, []),
       # Start your own worker by calling: Istisare.Worker.start_link(arg1, arg2, arg3)
       # worker(Istisare.Worker, [arg1, arg2, arg3]),
       #max 26 hours
