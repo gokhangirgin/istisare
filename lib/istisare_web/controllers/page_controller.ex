@@ -9,7 +9,7 @@ defmodule IstisareWeb.PageController do
 
   def show(conn, %{"slug" => slug}) do
     case Rooms.get_room(slug) do
-      {:ok, room} ->
+      room = %Room{} ->
         conn
         |> render "show.html", room: room
       _ ->
