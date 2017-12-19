@@ -6,7 +6,7 @@ defmodule IstisareWeb.RoomChannelTest do
   setup do
     {:ok, _, socket} =
       socket("user_id", %{some: :assign})
-      |> subscribe_and_join(RoomChannel, "room:lobby")
+      |> subscribe_and_join(RoomChannel, "rooms:lobby")
 
     {:ok, socket: socket}
   end

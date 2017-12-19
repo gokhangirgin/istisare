@@ -14,6 +14,7 @@ defmodule IstisareWeb.PageController do
         |> render "show.html", room: room
       _ ->
         conn
+        |> put_status(:not_found)
         |> render(IstisareWeb.ErrorView, "404.html")
     end
   end
