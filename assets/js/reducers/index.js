@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
-import createRoom from './createroom'
 //import reducers
-export default combineReducers({
-  //add reducers
-  createRoom
+import roomReducer from './RoomReducer'
+
+const rootReducer = combineReducers({
+  roomReducer
 })
+
+export default rootReducer;

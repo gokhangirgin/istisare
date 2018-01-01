@@ -2,12 +2,13 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import reducers from './reducers/index'
-import CreateRoom from './components/CreateRoom'
-let store = createStore(reducers)
+import NewRoom from './components/NewRoom.js'
+import store from './store'
+
+
 render(
     <Provider store={store}>
-        <CreateRoom />
+        <NewRoom />
     </Provider>,
-    document.getElementById('createRoom')
+    document.getElementById('newRoom')
 )
