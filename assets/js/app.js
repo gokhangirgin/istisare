@@ -2,13 +2,22 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import NewRoom from './components/NewRoom.js'
+import NewRoom from './components/NewRoom'
 import store from './store'
 
-
-render(
+if(document.getElementById('newRoom')){
+  render(
+      <Provider store={store}>
+          <NewRoom />
+      </Provider>,
+      document.getElementById('newRoom')
+  );
+}
+if(document.getElementById('roomPage')){
+  render(
     <Provider store={store}>
-        <NewRoom />
+      <RoomPage />
     </Provider>,
-    document.getElementById('newRoom')
-)
+    document.getElementById('roomPage')
+  );
+}

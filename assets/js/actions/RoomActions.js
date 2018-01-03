@@ -4,7 +4,7 @@ export function roomProcess(resp){
   const body = resp.body;
   switch (resp.status) {
     case 201:
-       return {type: "ROOM_CREATED", room: body.room}
+       return {type: "ROOM_CREATED", room: body}
       break;
     case 226:
        return {type: "ROOM_EXISTS", room: body.room}
