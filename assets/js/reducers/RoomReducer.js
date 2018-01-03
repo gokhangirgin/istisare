@@ -1,14 +1,9 @@
-const initialState = {
-  room: {},
-  isSubmitting: false,
-  isProtected: false,
-  isCreated: false,
-  isExists: false
-};
+import {initialNewRoomState} from '../state'
 
-export default (state = initialState, action) => {
+export default (state = initialNewRoomState, action) => {
   switch (action.type) {
     case "ROOM_NEW_REQUEST" :
+      console.log("ROOM_NEW_REQUEST");
       return Object.assign({}, state, {
         isSubmitting: true
       });
@@ -26,8 +21,7 @@ export default (state = initialState, action) => {
         isExists: true, isSubmitting: false, room: action.room
       });
     default:
-      return Object.assign({}, state, {
-        isSubmitting: false
-      });
+      return state;
   }
+  return state;
 }

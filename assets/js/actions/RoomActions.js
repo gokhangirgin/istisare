@@ -15,6 +15,9 @@ export function roomProcess(resp){
 
 export function createRoom(room) {
   return function (dispatch){
+
+    dispatch({type: "ROOM_NEW_REQUEST"});
+
     return api.post("/create", room)
     .then((resp) => {
       dispatch(roomProcess(resp));
