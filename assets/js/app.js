@@ -13,11 +13,3 @@ if(document.getElementById('newRoom')){
       document.getElementById('newRoom')
   );
 }
-if(document.getElementById('roomPage')){
-  render(
-    <Provider store={store}>
-      <RoomPage />
-    </Provider>,
-    document.getElementById('roomPage')
-  );
-}
