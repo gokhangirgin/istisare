@@ -44,7 +44,7 @@ class NewRoom extends Component {
 }
 
 function mapStateToProps(state) {
-  return state.roomReducer;
+  return state.newRoomReducer;
 }
 
 export default connect(mapStateToProps, {createRoom})(NewRoom);

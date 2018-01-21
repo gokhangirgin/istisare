@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import { reducer as form  } from 'redux-form';
 //import reducers
-import roomReducer from './RoomReducer'
+import newRoomReducer from './NewRoomReducer'
 
 const rootReducer = combineReducers({
-  roomReducer,
+  newRoomReducer,
   form
 })
 
