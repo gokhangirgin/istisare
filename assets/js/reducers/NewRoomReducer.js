@@ -3,7 +3,6 @@ import { initialNewRoomState } from '../state'
 export default (state = initialNewRoomState, action) => {
   switch (action.type) {
     case "ROOM_NEW_REQUEST" :
-      console.log("ROOM_NEW_REQUEST");
       return Object.assign({}, state, {
         isSubmitting: true
       });

@@ -16,25 +16,33 @@ class RoomEnteranceForm extends Component {
     render(){
         const {handleSubmit, isProtected} = this.props
         return(
-            <form onSubmit={handleSubmit(this.handleSubmit)}>
-            <Field 
-              name="name"
-              type="text"
-              label="Full Name"
-              component={renderField}
-              validate={[required, minLength2, maxLength30]}
-            />
+            <div className="row">
+                <div className="col-md-6 col-md-offset-3">
+                    <div className="card card-outline-primary p-3">
+                        <div className="card-block">
+                            <form onSubmit={handleSubmit(this.handleSubmit)}>
+                                <Field 
+                                name="name"
+                                type="text"
+                                label="Full Name"
+                                component={renderField}
+                                validate={[required, minLength2, maxLength30]}
+                                />
 
-            {isProtected ? <Field
-              name="password"
-              type="password"
-              label="Room Password"
-              component={renderField}
-              validate={[required, minLength2, maxLength30]}
-            /> : ''}
-            
-            <button type="submit" className="btn btn-block btn-success">Enter Room</button>
-          </form>
+                                {isProtected ? <Field
+                                name="password"
+                                type="password"
+                                label="Room Password"
+                                component={renderField}
+                                validate={[required, minLength2, maxLength30]}
+                                /> : ''}
+                                
+                                <button type="submit" className="btn btn-block btn-success">Enter Room</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
